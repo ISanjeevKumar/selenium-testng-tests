@@ -8,15 +8,15 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginWithValidUserCredentials() {
+        SauceDemoApp sauceDemoApp = null;
         try {
-            SauceDemoApp sauceDemoApp = new SauceDemoApp();
+            sauceDemoApp = new SauceDemoApp();
             sauceDemoApp.navigateToApp();
-            sauceDemoApp.homePage().login("username", "password");
-            sauceDemoApp.dispose();
+            sauceDemoApp.homePage().login("problem_user", "secret_sauce");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         } finally {
-
+            sauceDemoApp.dispose();
         }
     }
 

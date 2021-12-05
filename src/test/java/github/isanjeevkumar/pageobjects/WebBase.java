@@ -12,9 +12,8 @@ public class WebBase {
 
     }
 
-    protected boolean success(){
-        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
-        System.out.println(stackTraceElements[0]);
+    protected boolean success(String message) {
+        System.out.println(message);
         return true;
     }
 }
