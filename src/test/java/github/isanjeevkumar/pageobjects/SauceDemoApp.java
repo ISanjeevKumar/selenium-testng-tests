@@ -9,6 +9,8 @@ import github.isanjeevkumar.selenium.BrowserManager;
 public class SauceDemoApp {
 
     private HomePage homepage;
+    private ProductsPage productsPage;
+
     private WebDriver driver;
 
     public SauceDemoApp() throws Exception {
@@ -22,9 +24,17 @@ public class SauceDemoApp {
         return homepage;
     }
 
-    public void navigateToApp(){
+    public ProductsPage productsPage() {
+        if (productsPage == null) {
+            productsPage = new ProductsPage(driver);
+        }
+        return productsPage;
+    }
+
+    public void navigateToApp() {
         driver.navigate().to("https://www.saucedemo.com/");
     }
+
     public void dispose() {
         driver.quit();
         driver = null;

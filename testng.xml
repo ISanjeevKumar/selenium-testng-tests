@@ -3,6 +3,7 @@
    <test name = "Smoke Tests" parallel = "methods" thread-count = "2">
       <classes>
          <class name = "github.isanjeevkumar.tests.LoginTests"/>
+         <class name = "github.isanjeevkumar.tests.AddToCartTests"/>
       </classes>
    </test>
 </suite>
